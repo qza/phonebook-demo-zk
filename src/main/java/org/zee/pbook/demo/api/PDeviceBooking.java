@@ -52,4 +52,14 @@ public class PDeviceBooking {
     public void setAvailability(Boolean availability) {
         this.availability = availability;
     }
+
+    @Override
+    public String toString() {
+        return "PDeviceBooking{" +
+                "device='" + device + '\'' +
+                ", user='" + user + '\'' +
+                ", bookedAt=" + bookedAt +
+                ", availability=" + availability +
+                '}';
+    }
 }

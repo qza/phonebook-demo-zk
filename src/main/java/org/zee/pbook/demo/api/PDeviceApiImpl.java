@@ -5,10 +5,6 @@ import com.aafanasev.fonoapi.rxjava.FonoApiFactory;
 import com.aafanasev.fonoapi.rxjava.FonoApiService;
 import io.reactivex.Observable;
 import io.reactivex.Single;
-import io.reactivex.SingleObserver;
-import io.reactivex.SingleSource;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Function;
 import org.zee.pbook.demo.local.FonoApiServiceImpl;
 
 import java.nio.file.Path;
@@ -33,13 +29,15 @@ public class PDeviceApiImpl implements PDeviceApi {
     public Observable<List<PDeviceApiResponse>> bookings() {
 //        Observable<Object> deviceEntities = devices().toObservable().flatMapIterable((f) -> f);
         List<DeviceEntity> deviceEntities = devices().blockingGet();
-        List<PDeviceApiResponse> apiResponses = deviceEntities.stream().map(d -> new PDeviceApiResponse(d, bookingStore.getBookings(d.getDeviceName()).blockingSingle())).collect(Collectors.toList());
+        List<PDeviceApiResponse> apiResponses = deviceEntities.stream()
+                .map(d -> new PDeviceApiResponse(d, bookingStore.getBookings(d.getDeviceName()).blockingSingle()))
+                .collect(Collectors.toList());
         return Observable.just(apiResponses);
     }
 
     @Override
-    public Single<PDeviceBooking> book(String device, String user) {
-        return bookingStore.addBooking(device, user).singleOrError();
+    public Observable<PDeviceBooking> book(String device, String user) {
+        return bookingStore.addBooking(device, user);
     }
 
     public static void printError(Throwable throwable) {

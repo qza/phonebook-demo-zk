@@ -12,6 +12,6 @@ public interface PDeviceApi {
 
     Observable<List<PDeviceApiResponse>> bookings();
 
-    Single<PDeviceBooking> book(String device, String user);
+    Observable<PDeviceBooking> book(String device, String user);
 
 }

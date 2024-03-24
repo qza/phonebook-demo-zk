@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:1.0.2-1"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile files('libs/fonoapi-1.0.jar')
+    compile files('libs/fonoapi-rxjava-1.0.jar')
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.10.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+}
+
+test {
+    useJUnitPlatform()
+}

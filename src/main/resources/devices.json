@@ -1,0 +1,65 @@
+[
+  {
+    "DeviceName": "Samsung Galaxy S9",
+    "technology": "GSM / HSPA / LTE / EVDO / CDMA",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 38, 39, 40, 41, 66"
+  },
+  {
+    "DeviceName": "Samsung Galaxy S8",
+    "technology": "GSM / HSPA / LTE",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 66, 38, 39, 40, 41"
+  },
+  {
+    "DeviceName": "Motorola Nexus 6",
+    "technology": "GSM / CDMA / HSPA / EVDO / LTE",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900 - all models",
+    "_3g_bands": "HSDPA 800 / 850 / 900 / 1700 / 1800 / 1900 / 2100 - XT1100",
+    "_4g_bands": "1, 3, 5, 7, 8, 9, 19, 20, 28, 41 - XT1100"
+  },
+  {
+    "DeviceName": "Oneplus 9",
+    "technology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2",
+    "_3g_bands": "HSDPA 800 / 850 / 900 / 1700(AWS) / 1800 / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 38, 39, 40, 41, 66 - EU, 1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 30, 32, 38, 39, 40, 41, 46, 48, 66, 71 - NA"
+  },
+  {
+    "DeviceName": "Apple iPhone 13",
+    "technology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM) - for China, CDMA 800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 14, 17, 18, 19, 20, 25, 26, 28, 29, 30, 32, 34, 38, 39, 40, 41, 42, 46, 48, 66, 71 - A2172"
+  },
+  {
+    "DeviceName": "Apple iPhone 12",
+    "technology": "GSM / CDMA / HSPA / EVDO / LTE / 5G",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM) - for China, CDMA 800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 14, 17, 18, 19, 20, 25, 26, 28, 29, 30, 32, 34, 38, 39, 40, 41, 42, 46, 48, 66, 71 - A2172"
+  },
+  {
+    "DeviceName": "Apple iPhone 11",
+    "technology": "GSM, CDMA, HSDPA, EVDO, LTE",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM) - for China, CDMA 800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100 CDMA2000 1xEV-DO",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 17, 18, 19, 20, 21, 25, 26, 28, 29, 30, 32, 34, 38, 39, 40, 41, 42, 46, 48, 66 - A2221"
+  },
+  {
+    "DeviceName": "iPhone X",
+    "technology": "GSM, HSDPA, LTE",
+    "_2g_bands": "GSM 850 / 900 / 1800 / 1900",
+    "_3g_bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+    "_4g_bands": "1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 29, 30, 34, 38, 39, 40, 41, 66"
+  },
+  {
+    "DeviceName": "Nokia 3310",
+    "technology": "GSM",
+    "_2g_bands": "GSM 900 / 1800",
+    "_3g_bands": "",
+    "_4g_bands": ""
+  }
+]

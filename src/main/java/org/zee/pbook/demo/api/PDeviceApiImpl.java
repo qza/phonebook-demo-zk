@@ -27,7 +27,6 @@ public class PDeviceApiImpl implements PDeviceApi {
 
     @Override
     public Observable<List<PDeviceApiResponse>> bookings() {
-//        Observable<Object> deviceEntities = devices().toObservable().flatMapIterable((f) -> f);
         List<DeviceEntity> deviceEntities = devices().blockingGet();
         List<PDeviceApiResponse> apiResponses = deviceEntities.stream()
                 .map(d -> new PDeviceApiResponse(d, bookingStore.getBookings(d.getDeviceName()).blockingSingle()))

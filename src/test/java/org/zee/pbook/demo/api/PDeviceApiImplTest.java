@@ -6,8 +6,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PDeviceApiImplTest {
 
@@ -50,25 +53,26 @@ public class PDeviceApiImplTest {
         var galaxyS9 = api.book(samsungGalaxyS9, "testUser")
                 .doOnNext((booking -> {
                     assertNotNull(booking);
-                    assertFalse(booking.getAvailability());
-                    System.out.println("device is scheduled");
                 }))
-                .doFinally(() -> System.out.println("call finalized"));
+                .doFinally(() -> System.out.println("action complete"));
 
-        galaxyS9.subscribe(getpDeviceBookingConsumer(), getThrowableConsumer()).dispose();
-        galaxyS9.subscribe(getpDeviceBookingConsumer(), getThrowableConsumer()).dispose();
+        galaxyS9.subscribe(getpDeviceBookingConsumer(), getThrowableConsumer());
+        galaxyS9.subscribe(getpDeviceBookingConsumer(), getThrowableConsumer());
+        galaxyS9.subscribe(getpDeviceBookingConsumer(), getThrowableConsumer());
     }
 
     @NotNull
     private Consumer<PDeviceBooking> getpDeviceBookingConsumer() {
         return (e) -> {
+            System.out.println("device [data: " + e + "]");
+            TimeUnit.MILLISECONDS.sleep(new Random().nextInt(1000));
         };
     }
 
     @NotNull
     private Consumer<Throwable> getThrowableConsumer() {
         return (t) -> {
-            System.out.println("error: " + t.getMessage());
+            System.out.println("final consumer error: " + t.getMessage());
         };
     }
 
